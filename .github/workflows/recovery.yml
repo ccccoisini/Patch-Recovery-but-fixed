@@ -6,7 +6,7 @@ on:
       RECOVERY_URL:
         description: 'RECOVERY URL'
         required: true
-        default: 'https://fyle.uk/download/W07Lz'
+        default: 'https://fyle.uk/download/aF4vb'
 
 jobs:
   build:
@@ -25,7 +25,8 @@ jobs:
         ls
         pwd
         wget ${{github.event.inputs.RECOVERY_URL }}
-        mv W07Lz recovery.img.lz4
+        mv aF4vb recovery.img
+        cp recovery.img recovery.img.lz4
 
     - name: Patch Process-1
       run: |
