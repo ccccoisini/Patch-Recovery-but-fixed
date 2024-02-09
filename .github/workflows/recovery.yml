@@ -6,10 +6,7 @@ on:
       RECOVERY_URL:
         description: 'RECOVERY URL'
         required: true
-        default: 'https://transfer.sh/(RECOMMENDED)'
-
-env:
-  RECOVERY_URL: https://oshi.at/Rpjg
+        default: 'https://fyle.uk/a34x-recovery'
 
 jobs:
   build:
@@ -28,6 +25,7 @@ jobs:
         ls
         pwd
         wget ${{github.event.inputs.RECOVERY_URL }}
+        mv a34x-recovery recovery.img.lz4
 
     - name: Patch Process-1
       run: |
